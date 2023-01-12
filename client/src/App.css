@@ -25,14 +25,23 @@
   max-width: 0 auto;
   grid-template-columns: repeat(3, 1fr);
   color: black;
+  font-size: large;
 }
 
 .decks li:hover {
-  background: rgb(158, 230, 243);
+  background: rgb(210, 232, 234);
   cursor: pointer;
 }
 
+.decks li button {
+  position: absolute;
+  font-size: 12px;
+  top: 5px;
+  right: 5px;
+}
+
 .decks li {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
