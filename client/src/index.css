@@ -44,7 +44,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(85, 235, 246, 0.914);
+  color: black;
   cursor: pointer;
   transition: border-color 0.25s;
 }
