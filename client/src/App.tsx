@@ -32,30 +32,33 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <ul className="decks">
-        {decks.map((deck) => (
-          <li key={deck._id}>
-            <button onClick={() => handleDeleteDeck(deck._id)}>X</button>
+    <div className="container">
+      <div className="App">
+        <h1>Your Decks</h1>
+        <ul className="decks">
+          {decks.map((deck) => (
+            <li key={deck._id}>
+              <button onClick={() => handleDeleteDeck(deck._id)}>X</button>
 
-            <Link to={`decks/${deck._id}`}>{deck.title}</Link>
-          </li>
-        ))}
-      </ul>
-      <form onSubmit={handleCreateDeck}>
-        <label htmlFor="deck-title">Deck Title</label>
-        <input
-          id="deck-title"
-          value={title}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            // save what they type
-            {
-              setTitle(e.target.value);
+              <Link to={`decks/${deck._id}`}>{deck.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <form onSubmit={handleCreateDeck}>
+          <label htmlFor="deck-title">Deck Title</label>
+          <input
+            id="deck-title"
+            value={title}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              // save what they type
+              {
+                setTitle(e.target.value);
+              }
             }
-          }
-        />
-        <button>Create Deck</button>
-      </form>
+          />
+          <button>Create Deck</button>
+        </form>
+      </div>
     </div>
   );
 }
